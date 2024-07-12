@@ -463,8 +463,9 @@ const HolidayCard = () => {
   return (
     <>
       <div className="gradientBackground" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', position: 'relative' }}>
-        <div style={{ textAlign: 'center' }}>
-          <Typography variant="h1" className="titleText" style={{ fontSize: '5rem', letterSpacing: '3px', fontWeight: '600', color: '#FFFFFF', textShadow: '2px 2px 8px rgba(0,0,0,0.5)' }}>
+        <div style={{ textAlign: 'center', display: 'flex' }}>
+          <img src="/favicon.ico" alt="Holiday" style={{ borderRadius: '25%', marginRight: '20px', height: '8rem', width: '8rem' }} />
+          <Typography variant="h1" className="titleText" style={{ fontSize: '5rem', letterSpacing: '3px', fontWeight: '600', color: '#FFFFFF', textShadow: '2px 2px 8px rgba(0,0,0,0.5)', marginTop: '1.5rem' }}>
             MakeYourTrip
           </Typography>
         </div>
