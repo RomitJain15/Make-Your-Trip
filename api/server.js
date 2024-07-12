@@ -18,8 +18,6 @@ app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 
-console.log(process.env)
-
 const authenticateToken = (req, res, next) => {
   // Get the token from the request header
   const authHeader = req.headers['authorization'];
