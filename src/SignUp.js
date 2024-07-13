@@ -30,6 +30,7 @@ function SignUp() {
     return (
         <div className="d-flex justify-content-center align-items-center vh-100" style={{ backgroundImage: 'url("https://c02.purpledshub.com/uploads/sites/48/2023/02/why-sky-blue-2db86ae.jpg?w=1029&webp=1")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="bg-white p-3 rounded w-25">
+                <Typography variant="h2" component="h2" style={{ paddingBottom: '30px' }}>MakeYourTrip</Typography>
                 <h2>Register</h2>
                 <form onSubmit={handleSignUpSuccess}> {/* Moved onSubmit here */}
                     <div className="mb-3">
