@@ -5,7 +5,7 @@ const axiosWithAuth = () => {
 
   return axios.create({
     // baseURL: 'http://localhost:5000',
-    baseURL: 'make-your-trip.vercel.app',
+    baseURL: 'https://make-your-trip-backend.onrender.com',
     headers: {
       Authorization: `Bearer ${token}` // Set the Authorization header with the JWT token
     }
