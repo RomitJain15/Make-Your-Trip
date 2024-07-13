@@ -9,7 +9,7 @@ import Profile from './Profile';
 function HomeRoute() {
   const location = useLocation();
   const isLoggedIn = localStorage.getItem('token') ? true : location.state?.isLoggedIn || false;
-
+  console.log(isLoggedIn, location)
   return isLoggedIn ? <HolidayCard /> : <Navigate to="/login" replace />;
 }
 
