@@ -101,7 +101,7 @@ const HolidayCard = () => {
     if (isTokenExpired(token)) {
       handleLogout();
     }
-    axiosWithAuth().get('http://localhost:5000/api/holidays')
+    axiosWithAuth().get('/api/holidays')
       .then(async response => {
         const holidays = response.data;
         const prices = holidays.map(holiday => holiday.price || 0);
