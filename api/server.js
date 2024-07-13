@@ -12,6 +12,11 @@ const JWT_SECRET = process.env.JWT_SECRET;
 
 const app = express();
 
+const corsOptions = {
+  origin: "https://make-your-trip-ajj9.onrender.com/", // frontend URI (ReactJS)
+}
+
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', function (req, res) {
@@ -20,7 +25,7 @@ app.get('/', function (req, res) {
 
 const PORT = process.env.PORT || 5000;
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
