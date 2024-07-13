@@ -12,7 +12,7 @@ function Login() {
       
     const handleLoginSuccess = (event) => {
       event.preventDefault(); // Prevent default form submission behavior
-      axios.post('http://localhost:5000/api/login', {email, password})
+      axios.post('https://make-your-trip-backend.onrender.com/api/login', {email, password})
       .then(response => {
         if(response.data.message === "Success") {
             localStorage.setItem('userName', response.data.user.name);
