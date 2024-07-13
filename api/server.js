@@ -1,4 +1,5 @@
-require('dotenv').config({ path: 'C:/Users/jainr/Projects/riskpro/.env' });
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -10,7 +11,6 @@ const jwt = require('jsonwebtoken');
 const JWT_SECRET = process.env.JWT_SECRET; 
 
 const app = express();
-const path = require('path');
 
 app.use(express.static(path.join(__dirname, 'build')));
 
