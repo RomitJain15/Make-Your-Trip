@@ -16,13 +16,6 @@ const corsOptions = {
   origin: "https://make-your-trip-ajj9.onrender.com/", // frontend URI (ReactJS)
 }
 
-
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
 const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors(corsOptions));
