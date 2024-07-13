@@ -63,7 +63,7 @@ function AddHolidayForm({ initialData, onSubmit }) {
             </FormGroup>
             <Rating name="rating" value={rating} onChange={(event, newValue) => setRating(newValue)} />
             <TextField label="Duration" value={duration} onChange={(e) => setDuration(e.target.value)} required={true} fullWidth margin="normal" />
-            <TextField label="Image URL" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} fullWidth margin="normal" />
+            <TextField label="Image URL(Leave blank for automated image)" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} fullWidth margin="normal" />
             <TextField label="Description" value={description} onChange={(e) => setDescription(e.target.value)} fullWidth margin="normal" />
             <TextField label="Tags (comma separated)" value={tags} onChange={(e) => setTags(e.target.value)} fullWidth margin="normal" />
             <Button type="submit" variant="contained" color="primary">{Object.keys(initialData).length !== 0 ? 'Update Record' : 'Add Record'}</Button>
