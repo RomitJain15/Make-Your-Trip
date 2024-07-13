@@ -18,7 +18,7 @@ function Login() {
             localStorage.setItem('userName', response.data.user.name);
             localStorage.setItem('userId', response.data.user._id);
             localStorage.setItem('token', response.data.token);
-            navigate('/');
+            navigate('/', { state: { isLoggedIn: true } });
         } else if(response.data.message === "Incorrect Password") {
             alert('Incorrect Password')
         } else {
