@@ -7,8 +7,22 @@ import Bookings from './Bookings';
 import Profile from './Profile';
 
 function App() {
-const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') ? true : false);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') ? true : false);
 
+  useEffect(() => {
+    const handleLoginEvent = () => {
+      setIsLoggedIn(localStorage.getItem('token') ? true : false);
+    };
+
+    // Listen for the loginEvent
+    window.addEventListener('loginEvent', handleLoginEvent);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('loginEvent', handleLoginEvent);
+    };
+  }, []);
+  
   return (
     <Router>
       <Routes>
