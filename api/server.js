@@ -16,7 +16,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors({
-  origin: 'https://make-your-trip-ajj9.onrender.com/' // Replace with your frontend domain
+  origin: 'https://make-your-trip-ajj9.onrender.com',
+  credentials: true
 }));
 app.use(express.json());
 app.use(bodyParser.json({ limit: '10mb' }));
