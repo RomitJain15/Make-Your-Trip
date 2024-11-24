@@ -14,7 +14,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend:
 - **React.js**: Interactive UI with a seamless user experience.
